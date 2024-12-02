@@ -1,0 +1,32 @@
+# macOS system files
+.DS_Store
+
+# Python-related files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.env
+.env
+*.venv
+.venv/
+*.ipynb_checkpoints/
+
+# Jupyter Notebook backups
+*.~nb
+
+# Logs
+*.log
+
+# Temporary files
+*.swp
+*.tmp
+*.bak
+*.old
+
+# Output from tools
+*.sqlite
+*.db
+
+# System files
+Thumbs.db
