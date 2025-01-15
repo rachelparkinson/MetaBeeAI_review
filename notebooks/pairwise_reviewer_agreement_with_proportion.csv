@@ -1,0 +1,14 @@
+Domain,Reviewer Pair,Agreed,Disagreed,Proportion Agreed
+molec,molec_AH vs molec_AJ,241,66,0.7850162866449512
+molec,molec_AH vs molec_EA,235,78,0.7507987220447284
+molec,molec_AJ vs molec_EA,294,107,0.7331670822942643
+subin,subin_RP vs subin_RT,72,28,0.72
+indiv,indiv_AB vs indiv_RP,75,21,0.78125
+popul,popul_CB vs popul_RP,19,4,0.8260869565217391
+commu,commu_AB vs commu_RP,84,15,0.8484848484848485
+letha,letha_ER vs letha_ES,37,10,0.7872340425531915
+letha,letha_ER vs letha_NN,122,20,0.8591549295774648
+letha,letha_ER vs letha_RP,48,2,0.96
+letha,letha_ES vs letha_NN,50,0,1.0
+letha,letha_ES vs letha_RP,0,1,0.0
+letha,letha_NN vs letha_RP,45,2,0.9574468085106383
