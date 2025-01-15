@@ -31,10 +31,6 @@ This folder contains two Jupyter notebooks that demonstrate how to merge multipl
    - Detects duplicates based on the `title` column and consolidates them using a group-by.
    - Saves the cleaned result as `cleaned_merged_dataset.csv`.
 
-5. **Identify Papers with No Domain**  
-   - Checks if a paper was never marked as included (`NaN` in all domain columns).
-   - Saves these papers to `not_included_papers.csv`.
-
 **Output Files**  
 - `../output/merged_dataset.csv`
 - `../output/cleaned_merged_dataset.csv`
