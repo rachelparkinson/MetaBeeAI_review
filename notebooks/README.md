@@ -1,6 +1,6 @@
 # Notebooks
 
-This folder contains two Jupyter notebooks that demonstrate how to merge multiple ASReview outputs into a single dataset and then perform analyses on the merged data. Below is a brief overview of each notebook and its purpose.
+This folder contains three Jupyter notebooks that demonstrate how to merge multiple ASReview outputs into a single dataset and then perform analyses on the merged data. Below is a brief overview of each notebook and its purpose.
 
 ---
 
@@ -71,11 +71,49 @@ This folder contains two Jupyter notebooks that demonstrate how to merge multipl
 
 ---
 
+## 3. **03_remove_unassigned.ipynb**
+
+**Purpose**  
+- Identifies papers not assigned to any domain (i.e., not included by any reviewer).
+- Removes these unassigned (or irrelevant) papers from the final dataset.
+- Optionally merges in a set of “relevant but unassigned” papers from an external file.
+- Checks for missing DOIs in the final compiled dataset.
+
+**Key Steps**  
+1. **Create File with Papers Not Assigned to Any Domain**  
+   - Loads `cleaned_merged_dataset.csv`.
+   - Finds rows where all domain columns are either `NaN` or `0`.
+   - Saves these papers to `not_included_papers.csv`.
+
+2. **Create a Dataset of Assigned Documents**  
+   - Identifies papers that have at least one domain value of `1` (or non-null).
+   - Saves these to `included_papers.csv`.
+
+3. **Merge External Relevant Unassigned Papers**  
+   - Loads `relevant_unassigned_papers.csv` from `../data/`.
+   - Concatenates it with `included_papers.csv`.
+   - Removes duplicates (via the `title` column).
+   - Saves the combined result to `final_dataset.csv`.
+
+4. **Check for Missing DOIs**  
+   - Loads the newly created `final_dataset.csv`.
+   - Extracts rows with null DOIs into `missing_doi.csv`.
+   - Prints the count of papers missing DOIs.
+
+**Output Files**  
+- `../output/not_included_papers.csv`  
+- `../output/included_papers.csv`  
+- `../output/final_dataset.csv`  
+- `../output/missing_doi.csv`
+
+---
+
 ## Usage Notes
 
 1. **Recommended Order**  
    - Run `01_merge_datasets.ipynb` first to produce the cleaned dataset files.
-   - Then run `02_review_output.ipynb` to generate summary statistics, plots, and reviewer agreement metrics.
+   - Run `02_review_output.ipynb` to generate summary statistics, plots, and reviewer agreement metrics.
+   - Finally, run `03_remove_unassigned.ipynb` to remove unassigned papers, merge external relevant unassigned data, and generate the final dataset.  
 
 2. **Dependencies**  
    - `pandas`
@@ -84,7 +122,7 @@ This folder contains two Jupyter notebooks that demonstrate how to merge multipl
    - Make sure to have these installed in your environment.
 
 3. **Data Paths**  
-   - The notebooks expect data in `../data/` and output to `../output/`.
+   - The notebooks expect data in `../data/` and output in `../output/`.
    - Adjust file paths as needed if your directory structure differs.
 
 ---
