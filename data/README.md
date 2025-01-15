@@ -6,7 +6,15 @@ This folder contains the initial **input dataset** of papers (`input_dataset.csv
 
 ## Folder Contents
 
-data/ ├── input_dataset.csv └── asreview_output/ ├── community/ │ ├── commu_AB.csv │ └── commu_RP.csv ├── individual/ │ ├── indiv_AB.csv │ └── indiv_RP.csv ├── ld50/ │ ├── letha_ER.csv │ ├── letha_ES.csv │ ├── letha_NN.csv │ └── letha_RP.csv ├── molecular/ │ ├── molec_AH.csv │ ├── molec_AJ.csv │ └── molec_EA.csv ├── population/ │ ├── popul_CB.csv │ └── popul_RP.csv └── subindividual/ ├── subin_RP.csv └── subin_RT.csv
+data/ 
+├── input_dataset.csv 
+└── asreview_output/ 
+  ├── community/ │ ├── commu_AB.csv │ └── commu_RP.csv 
+  ├── individual/ │ ├── indiv_AB.csv │ └── indiv_RP.csv 
+  ├── ld50/ │ ├── letha_ER.csv │ ├── letha_ES.csv │ ├── letha_NN.csv │ └── letha_RP.csv 
+  ├── molecular/ │ ├── molec_AH.csv │ ├── molec_AJ.csv │ └── molec_EA.csv 
+  ├── population/ │ ├── popul_CB.csv │ └── popul_RP.csv 
+  └── subindividual/ ├── subin_RP.csv └── subin_RT.csv
 
 ---
 
