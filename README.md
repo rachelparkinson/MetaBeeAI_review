@@ -101,7 +101,6 @@ pip install -r requirements.txt
 ## Contributing
 
 Contributions are welcome! For major changes, please open an issue first to discuss the proposed updates.  
-Remember to add or update tests as appropriate.
 
 ---
 
